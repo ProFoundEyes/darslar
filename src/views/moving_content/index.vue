@@ -1,11 +1,12 @@
 <template>
     <div 
         @pointerdown="(event:any) => move.down(event)"
+        @touchmove="(event:any) => move.move(event)"
         @pointermove="(event:any) => move.move(event)"
         @pointerup="move.up()"
         @pointerout="move.out()"
         class="relative w-48 h-48 bg-white rounded">
-
+        {{move.is_down}}
     </div>
 </template>
 
